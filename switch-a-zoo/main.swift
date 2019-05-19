@@ -27,9 +27,9 @@ enum YesNo {
 
     init?(_ string: String?) {
         switch string?.lowercased() {
-        case "y", "yes":
+        case "y", "yes", "sure", "yah", "yeah", "yea", "ya", "positive":
             self = .yes
-        case "n", "no":
+        case "n", "no", "nah", "nope", "negative":
             self = .no
         default: return nil
         }
