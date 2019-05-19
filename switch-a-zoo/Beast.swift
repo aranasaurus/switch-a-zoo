@@ -14,13 +14,15 @@ class Beast {
     var arms: Arms?
     var legs: Legs?
     var wings: Wings?
+    var tail: Tail?
 
-    init(torso: Torso, head: Head, arms: Arms? = nil, legs: Legs? = nil, wings: Wings? = nil) {
+    init(torso: Torso, head: Head, arms: Arms? = nil, legs: Legs? = nil, wings: Wings? = nil, tail: Tail? = nil) {
         self.torso = torso
         self.head = head
         self.arms = arms
         self.legs = legs
         self.wings = wings
+        self.tail = tail
     }
 }
 
@@ -33,6 +35,10 @@ extension Beast: CustomStringConvertible {
 
         if let legs = legs {
             output.append(". It stands on the legs of a \(legs)")
+        }
+
+        if let tail = tail {
+            output.append(" and has the amazing tail of a \(tail)")
         }
 
         if let wings = wings {

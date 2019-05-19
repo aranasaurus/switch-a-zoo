@@ -82,7 +82,17 @@ private func createBeast() {
         break
     }
 
-    let beast = Beast(torso: torso, head: head, arms: arms, legs: legs, wings: wings)
+    let tail: Tail?
+    print("Does it have a tail? [y/n]")
+    switch YesNo(readLine()) {
+    case .some(.yes):
+        tail = Tail.create()
+    default:
+        tail = nil
+        break
+    }
+
+    let beast = Beast(torso: torso, head: head, arms: arms, legs: legs, wings: wings, tail: tail)
     print(beast)
 }
 
