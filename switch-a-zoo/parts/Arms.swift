@@ -14,4 +14,6 @@ enum Arms: String, BodyPart {
     case human
     case octupus
     case monkey
+    case bear
+
 }

@@ -14,4 +14,5 @@ enum Legs: String, BodyPart {
     case dragon
     case human
     case horse
+    case bear
 }

@@ -9,9 +9,10 @@
 import Foundation
 
 enum Torso: String, BodyPart {
-    static var prompt: String { return "What kind of torso?"}
+    static var prompt: String { return "What kind of torso?" }
     case dragon
     case shark
     case human
     case wasp
+    case bear
 }

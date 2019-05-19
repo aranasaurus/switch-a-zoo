@@ -15,4 +15,5 @@ enum Head: String, BodyPart {
     case eagle
     case dragon
     case wasp
+    case bear
 }
