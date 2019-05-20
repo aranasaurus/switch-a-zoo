@@ -9,15 +9,19 @@
 import Foundation
 
 func main() {
-    print("Welcome to Sw!tch-a-zoo!")
+    print("Welcome to switch-a-zoo! An Art Inspiration Tool")
 
-    print("Would you like to create a beast? [Y/n]")
-    switch YesNo(readLine()!) ?? .yes {
-    case .yes:
+    print("Would you like to create a beast manually? [y/n]")
+    switch YesNo(readLine()!) {
+    case .some(.yes):
         print("Alright, let's get started!")
         createBeast()
-    case .no:
-        quit()
+    case .some(.no):
+        print("Let me think for a moment...")
+        sleep(2)
+        print(Beast.randomBeast)
+    case .none:
+        print(["Excuse me?", "Try again...", "I don't understand"].randomElement()!)
     }
 }
 
@@ -42,6 +46,11 @@ func quit() {
 }
 
 private func createBeast() {
+    guard let size = Size.create() else {
+        quit()
+        return
+    }
+
     guard let torso = Torso.create() else {
         quit()
         return
@@ -50,7 +59,7 @@ private func createBeast() {
         quit()
         return
     }
-    print("A beast with the head of a \(head) and the body of a \(torso), eh?")
+    print("A \(size) beast with the head of a \(head) and the body of a \(torso), eh?")
 
     let wings: Wings?
     print("Does it have wings? [y/n]")
@@ -92,7 +101,17 @@ private func createBeast() {
         break
     }
 
-    let beast = Beast(torso: torso, head: head, arms: arms, legs: legs, wings: wings, tail: tail)
+    let horns: Horns?
+    print("Does it have horns? [y/n]")
+    switch YesNo(readLine()) {
+    case .some(.yes):
+        horns = Horns.create()
+    default:
+        horns = nil
+        break
+    }
+
+    let beast = Beast(torso: torso, head: head, size: size, arms: arms, legs: legs, wings: wings, tail: tail, horns: horns)
     print(beast)
 }
 

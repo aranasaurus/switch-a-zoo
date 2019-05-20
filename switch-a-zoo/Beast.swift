@@ -11,24 +11,46 @@ import Foundation
 class Beast {
     var torso: Torso
     var head: Head
+    var size: Size
     var arms: Arms?
     var legs: Legs?
     var wings: Wings?
     var tail: Tail?
+    var horns: Horns?
 
-    init(torso: Torso, head: Head, arms: Arms? = nil, legs: Legs? = nil, wings: Wings? = nil, tail: Tail? = nil) {
+    init(torso: Torso, head: Head, size: Size, arms: Arms? = nil, legs: Legs? = nil, wings: Wings? = nil, tail: Tail? = nil, horns: Horns? = nil) {
         self.torso = torso
         self.head = head
+        self.size = size
         self.arms = arms
         self.legs = legs
         self.wings = wings
         self.tail = tail
+        self.horns = horns
+    }
+
+    static var randomBeast: Beast {
+        return Beast(
+            torso: Torso.allCases.randomElement()!,
+            head: Head.allCases.randomElement()!,
+            size: Size.allCases.randomElement()!,
+            arms: Arms.allCases.randomElement(),
+            legs: Legs.allCases.randomElement(),
+            wings: Wings.allCases.randomElement(),
+            tail: Tail.allCases.randomElement(),
+            horns: Horns.allCases.randomElement()
+        )
     }
 }
 
 extension Beast: CustomStringConvertible {
     var description: String {
-        var output = "A beast with the body of a \(torso) and the head of a \(head)"
+        var output = "A \(size.description) beast with the body of a \(torso) and the head of a \(head)"
+
+        if let horns = horns {
+            output.append(" with \(horns) horns")
+        }
+
         if let arms = arms {
             output.append(" and \(arms) arms")
         }

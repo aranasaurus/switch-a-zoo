@@ -16,6 +16,8 @@
 		F9AC4BCF2290BF45003C5A1B /* Wings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AC4BCE2290BF45003C5A1B /* Wings.swift */; };
 		F9AC4BD12290BF8A003C5A1B /* Beast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AC4BD02290BF8A003C5A1B /* Beast.swift */; };
 		F9AC4BD32290CF44003C5A1B /* Tail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AC4BD22290CF44003C5A1B /* Tail.swift */; };
+		F9AC4BD52290D580003C5A1B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AC4BD42290D580003C5A1B /* Size.swift */; };
+		F9AC4BD72290D70B003C5A1B /* Horns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AC4BD62290D70B003C5A1B /* Horns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,8 @@
 		F9AC4BCE2290BF45003C5A1B /* Wings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wings.swift; sourceTree = "<group>"; };
 		F9AC4BD02290BF8A003C5A1B /* Beast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beast.swift; sourceTree = "<group>"; };
 		F9AC4BD22290CF44003C5A1B /* Tail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tail.swift; sourceTree = "<group>"; };
+		F9AC4BD42290D580003C5A1B /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		F9AC4BD62290D70B003C5A1B /* Horns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horns.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,9 @@
 				F9AC4BC32290B923003C5A1B /* BodyPart.swift */,
 				F9AC4BC92290BEFB003C5A1B /* Arms.swift */,
 				F9AC4BC72290BEB8003C5A1B /* Head.swift */,
+				F9AC4BD62290D70B003C5A1B /* Horns.swift */,
 				F9AC4BCC2290BF2D003C5A1B /* Legs.swift */,
+				F9AC4BD42290D580003C5A1B /* Size.swift */,
 				F9AC4BD22290CF44003C5A1B /* Tail.swift */,
 				F9AC4BC52290BE90003C5A1B /* Torso.swift */,
 				F9AC4BCE2290BF45003C5A1B /* Wings.swift */,
@@ -153,10 +159,12 @@
 			files = (
 				F9AC4BCD2290BF2D003C5A1B /* Legs.swift in Sources */,
 				F9AC4BC62290BE90003C5A1B /* Torso.swift in Sources */,
+				F9AC4BD72290D70B003C5A1B /* Horns.swift in Sources */,
 				F9AC4BC42290B923003C5A1B /* BodyPart.swift in Sources */,
 				F9AC4BBD229092AE003C5A1B /* main.swift in Sources */,
 				F9AC4BC82290BEB8003C5A1B /* Head.swift in Sources */,
 				F9AC4BD32290CF44003C5A1B /* Tail.swift in Sources */,
+				F9AC4BD52290D580003C5A1B /* Size.swift in Sources */,
 				F9AC4BD12290BF8A003C5A1B /* Beast.swift in Sources */,
 				F9AC4BCF2290BF45003C5A1B /* Wings.swift in Sources */,
 				F9AC4BCA2290BEFB003C5A1B /* Arms.swift in Sources */,

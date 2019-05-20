@@ -23,7 +23,10 @@ extension BodyPart {
 }
 
 extension BodyPart where Self.AllCases.Index == Int {
-    static func create() -> Self? {
+    static func create(randomized: Bool = false) -> Self? {
+        guard !randomized else {
+            return Self.allCases.randomElement()
+        }
         print(Self.prompt)
         for (i, t) in Self.allCases.enumerated() {
             print("  \(i + 1): \(t)")
